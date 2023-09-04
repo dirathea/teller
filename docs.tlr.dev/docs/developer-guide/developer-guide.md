@@ -3,13 +3,13 @@ sidebar_position: 4
 ---
 # Developer Guide
 
-- [Add new provider](./new-provider)
+- [Add new provider](/developer-guide/new-provider)
 - Quick testing as you code: `make lint && make test`
 - Checking your work before PR, run also integration tests: `make integration`
 
 ## Linting
 
-Linting is treated as a form of testing (using `golangci`, configuration [here](.golangci.yml)), to run:
+Linting is treated as a form of testing (using `golangci`, configuration [here](https://github.com/tellerops/teller/blob/master/.golangci.yml)), to run:
 
 ```
 $ make lint
@@ -20,7 +20,7 @@ $ make lint
 Testing is composed of _unit tests_ and _integration tests_. Integration tests are based on _testcontainers_ as well as live sandbox APIs (where containers are not available)
 
 - Unit tests are a mix of pure and mocks based tests, abstracting each provider's interface with a custom _client_
-- View [integration tests](/pkg/integration_test)
+- View [integration tests](https://github.com/tellerops/teller/tree/master/pkg/integration_test)
 
 To run all unit tests without integration:
 

@@ -27,7 +27,7 @@ Adding a new Teller provider is very easy, but you still need to know where to s
 
 Set `Description, Name, and Authentication`, as well as `OpMatrix` that descibes the action this provider supports, based on your implementation.
 
-3. Add a provider template configuration in path: [pkg/wizard_template.go](../pkg/wizard_template.go). This will be used to auto-generate a configuration.
+3. Add a provider template configuration in path: [pkg/wizard_template.go](https://github.com/tellerops/teller/blob/master/pkg/wizard_template.go). This will be used to auto-generate a configuration.
 
 ```go
 {{- if index .ProviderKeys "example" }}
@@ -76,9 +76,9 @@ $ go mod vendor
 
 ## Adding tests
 
-Create an `example_test.go` file in [pkg/providers](../pkg/providers) folder.
+Create an `example_test.go` file in [pkg/providers](https://github.com/tellerops/teller/tree/master/pkg/providers) folder.
 
-In case you warp the client-provider with an interface you can run a mock generator with the [mock](https://github.com/golang/mock) framework and add this command to the [Makefile](../Makefile)
+In case you warp the client-provider with an interface you can run a mock generator with the [mock](https://github.com/golang/mock) framework and add this command to the [Makefile](https://github.com/tellerops/teller/blob/master/Makefile)
 
 ```sh
 mockgen -source pkg/providers/example.go -destination pkg/providers/mock_providers/example_mock.go
@@ -86,7 +86,7 @@ mockgen -source pkg/providers/example.go -destination pkg/providers/mock_provide
 
 Test guidelines:
 
-- Create a `TestExample` function and call [AssertProvider](../pkg/providers/helpers_test.go) for testing main functionality.
+- Create a `TestExample` function and call [AssertProvider](https://github.com/tellerops/teller/blob/master/pkg/providers/helpers_test.go) for testing main functionality.
 - Create a `TestExampleFailures` for testing error handling.
 - You can also add more tests for testing private functions.
 - Run `make lint` to validate linting.
