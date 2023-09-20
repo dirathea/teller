@@ -111,7 +111,8 @@ const config = {
     }),
   scripts: [
     {
-      src: 'https://plausible.io/js/script.js',
+      src: 'https://analytics.dirathea.com/js/script.js',
+      async: true,
       defer: true,
       'data-domain': 'dirathea.github.io/teller'
     },
