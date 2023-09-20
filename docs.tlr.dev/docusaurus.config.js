@@ -109,6 +109,13 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  scripts: [
+    {
+      src: 'https://plausible.io/js/script.js',
+      defer: true,
+      'data-domain': 'dirathea.github.io/teller'
+    },
+  ]
 };
 
 module.exports = config;
